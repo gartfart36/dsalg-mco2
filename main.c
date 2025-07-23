@@ -2,6 +2,7 @@
 #include"matrix.h"
 #include"stack.h"
 #include"queue.h"
+#include"bfs.h"
 
 int 
 main() {
@@ -14,7 +15,6 @@ main() {
     addVertex(&matrix1, &vertexList1, "john");
     addVertex(&matrix1, &vertexList1, "bob");
     addEdge(&matrix1, getIndex(vertexList1, "jeff"), getIndex(vertexList1, "john"), 1);
-    //addEdge(&matrix1, 2, 1, 50);
     displayVertexList(vertexList1);
     displayMatrix(matrix1);
 
