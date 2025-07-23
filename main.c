@@ -1,14 +1,20 @@
 #include<stdio.h>
 #include"matrix.h"
+#include"stack.h"
+#include"queue.h"
 
 int 
 main() {
     Matrix matrix1 = newMatrix();
     VertexList vertexList1 = newVertexList();
+    Stack stack1 = newStack();
+    Queue queue1 = newQueue();
+    
     addVertex(&matrix1, &vertexList1, "jeff");
     addVertex(&matrix1, &vertexList1, "john");
     addVertex(&matrix1, &vertexList1, "bob");
-    addEdge(&matrix1, 0, 0, 1);
+    addEdge(&matrix1, getIndex(vertexList1, "jeff"), getIndex(vertexList1, "john"), 1);
+    //addEdge(&matrix1, 2, 1, 50);
     displayVertexList(vertexList1);
     displayMatrix(matrix1);
 

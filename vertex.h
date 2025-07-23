@@ -9,6 +9,7 @@ typedef struct {
 
 VertexList newVertexList();
 void addVertexToList(VertexList *vertexList, char name[]);
+int getIndex(VertexList vertexList, char name[]);
 void displayVertexList(VertexList vertexList);
 
 #endif

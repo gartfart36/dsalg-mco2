@@ -18,6 +18,17 @@ addVertexToList(VertexList *vertexList, char name[]) {
     vertexList->end++;
 }
 
+int 
+getIndex(VertexList vertexList, char name[]) {
+    int idx = -1;
+    for (int i = 0; i < vertexList.end; i++) {
+        if (strcmp(name, vertexList.list[i]) == 0) {
+            idx = i;
+        }
+    }
+    return idx;
+}
+
 void 
 displayVertexList(VertexList vertexList) {
     for (int i = 0; i < vertexList.end; i++) {
