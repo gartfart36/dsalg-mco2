@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<string.h>
-#include"matrix.h"
+#include <stdio.h>
+#include <string.h>
+#include "matrix.h"
 
 Matrix 
 newMatrix() {
@@ -30,22 +30,28 @@ void
 displayMatrix(Matrix mat) {
     printf("   ");
     for (int i = 0; i < mat.size; i++) {
-        if (i < 10) {
-            printf("%d  ", i);
-        } else {
-            printf("%d ", i);
-        }
+        printf("%3d", i);
     }
     printf("\n");
     for (int i = 0; i < mat.size; i++) {
-        printf("%d: ", i);
+        printf("%2d: ", i);
         for (int j = 0; j < mat.size; j++) {
-            if (mat.arr[i][j] < 10) {
-                printf("%d  ", mat.arr[i][j]);
-            } else {
-                printf("%d ", mat.arr[i][j]);
-            }
+            printf("%3d", mat.arr[i][j]);
         }
         printf("\n");
     }
+}
+
+int 
+getDegree(Matrix mat, int idx) {
+    int deg = 0;
+    for (int j = 0; j < mat.size; j++) {
+        if (mat.arr[idx][j] != 0) deg++;
+    }
+    return deg;
+}
+
+int 
+edgeExists(Matrix mat, int i, int j) {
+    return mat.arr[i][j] != 0;
 }
