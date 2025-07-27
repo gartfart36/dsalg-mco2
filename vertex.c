@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<string.h>
-#include"vertex.h"
+#include <stdio.h>
+#include <string.h>
+#include "vertex.h"
 
 VertexList 
 newVertexList() {
@@ -31,8 +31,10 @@ getIndex(VertexList vertexList, char name[]) {
 
 void 
 displayVertexList(VertexList vertexList) {
+    printf("V = { ");
     for (int i = 0; i < vertexList.end; i++) {
-        printf("%d: %s\n", i, vertexList.list[i]);
+        printf("%s", vertexList.list[i]);
+        if (i < vertexList.end - 1) printf(", ");
     }
-    printf("\n");
+    printf(" }\n");
 }
