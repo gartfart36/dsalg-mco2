@@ -47,8 +47,7 @@ int main() {
             char u[MAX_VALUE], v[MAX_VALUE]; scanf("%s %s", u, v);
             dijkstra(&mat, &verts, u, v);
         } else if (cmd == 10) {     // 10
-            displayVertexList(&verts);
-            displayMatrix(&mat);
+            printGraph(&mat, &verts);
         } else if (cmd == 11) {     // terminate
             break;
         }
